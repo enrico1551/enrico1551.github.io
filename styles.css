@@ -92,7 +92,7 @@ a {
 
 .hero {
   display: grid;
-  min-height: calc(100vh - 72px);
+  min-height: min(820px, calc(100vh - 72px));
   grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.72fr);
   align-items: center;
   gap: clamp(32px, 6vw, 76px);
@@ -361,6 +361,130 @@ h3 {
     var(--night);
 }
 
+.pearth-section {
+  background: #fff;
+}
+
+.gallery-heading {
+  margin-top: 54px;
+}
+
+.media-gallery,
+.komunitree-grid,
+.analysis-grid,
+.cert-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.media-gallery {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.media-gallery figure,
+.komunitree-card,
+.analysis-card,
+.cert-grid article {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.media-gallery img,
+.komunitree-card img,
+.analysis-card img,
+.cert-grid img {
+  width: 100%;
+  display: block;
+  background: #f3f6f8;
+}
+
+.media-gallery img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top;
+}
+
+.media-gallery figcaption,
+.komunitree-card figcaption,
+.analysis-card div,
+.cert-grid article {
+  padding: 18px;
+}
+
+.media-gallery figcaption,
+.komunitree-card figcaption,
+.analysis-card p,
+.cert-grid p {
+  color: var(--muted);
+}
+
+.komunitree-feature .project-media img {
+  min-height: 330px;
+  object-fit: cover;
+}
+
+.komunitree-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.komunitree-card.wide {
+  grid-column: 1 / -1;
+}
+
+.komunitree-card img {
+  max-height: 460px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.komunitree-card.wide img {
+  aspect-ratio: 21 / 9;
+}
+
+.komunitree-card:not(.wide) img {
+  aspect-ratio: 16 / 10;
+}
+
+.metric-row.light div {
+  border-color: var(--line);
+  background: #fff;
+  color: var(--ink);
+}
+
+.metric-row.light span {
+  color: var(--muted);
+}
+
+.analysis-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 20px;
+}
+
+.analysis-card.wide {
+  grid-column: 1 / -1;
+}
+
+.analysis-card img {
+  object-fit: contain;
+}
+
+.cert-section {
+  background: #fff;
+}
+
+.cert-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cert-grid img {
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  padding: 14px;
+}
+
 .dashboard-section .eyebrow,
 .dashboard-section .section-heading p {
   color: #9ce7df;
@@ -575,7 +699,11 @@ canvas {
   .service-grid,
   .metric-row,
   .flow-list,
-  .skills-layout {
+  .skills-layout,
+  .media-gallery,
+  .komunitree-grid,
+  .analysis-grid,
+  .cert-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -599,8 +727,16 @@ canvas {
   .chart-grid,
   .flow-list,
   .f1-dashboard,
-  .skills-layout {
+  .skills-layout,
+  .media-gallery,
+  .komunitree-grid,
+  .analysis-grid,
+  .cert-grid {
     grid-template-columns: 1fr;
+  }
+
+  .komunitree-card.wide {
+    grid-column: auto;
   }
 
   .section-heading {

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="680" viewBox="0 0 1100 680">
+  <rect width="1100" height="680" fill="#fbfaf7"/>
+  <text x="28" y="42" font-family="Arial" font-size="24" font-weight="700" fill="#111827">Pearth branch decision support</text>
+  <text x="28" y="68" font-family="Arial" font-size="13" fill="#5b6678">Where application volume and approval health can guide operations</text>
+  <text x="36" y="144" font-family="Arial" font-size="14" font-weight="700" fill="#111827">CARMEN</text>
+<rect x="300" y="120" width="29.2" height="25" fill="#2ab7ca" rx="4"/>
+<text x="341.2" y="138" font-family="Arial" font-size="13" fill="#374151">350 apps | 89% approved</text>
+<text x="36" y="186" font-family="Arial" font-size="14" font-weight="700" fill="#111827">STA CRUZ</text>
+<rect x="300" y="162" width="32.3" height="25" fill="#2ab7ca" rx="4"/>
+<text x="344.3" y="180" font-family="Arial" font-size="13" fill="#374151">387 apps | 89% approved</text>
+<text x="36" y="228" font-family="Arial" font-size="14" font-weight="700" fill="#111827">ANTIPOLO</text>
+<rect x="300" y="204" width="35.1" height="25" fill="#2ab7ca" rx="4"/>
+<text x="347.1" y="222" font-family="Arial" font-size="13" fill="#374151">421 apps | 84% approved</text>
+<text x="36" y="270" font-family="Arial" font-size="14" font-weight="700" fill="#111827">TALISAY</text>
+<rect x="300" y="246" width="40.6" height="25" fill="#2ab7ca" rx="4"/>
+<text x="352.6" y="264" font-family="Arial" font-size="13" fill="#374151">487 apps | 97% approved</text>
+<text x="36" y="312" font-family="Arial" font-size="14" font-weight="700" fill="#111827">OROQUIETA</text>
+<rect x="300" y="288" width="42.3" height="25" fill="#2ab7ca" rx="4"/>
+<text x="354.3" y="306" font-family="Arial" font-size="13" fill="#374151">507 apps | 95% approved</text>
+<text x="36" y="354" font-family="Arial" font-size="14" font-weight="700" fill="#111827">IPIL</text>
+<rect x="300" y="330" width="47.4" height="25" fill="#2ab7ca" rx="4"/>
+<text x="359.4" y="348" font-family="Arial" font-size="13" fill="#374151">568 apps | 94% approved</text>
+<text x="36" y="396" font-family="Arial" font-size="14" font-weight="700" fill="#111827">EB MAGALONA</text>
+<rect x="300" y="372" width="51.8" height="25" fill="#2ab7ca" rx="4"/>
+<text x="363.8" y="390" font-family="Arial" font-size="13" fill="#374151">621 apps | 96% approved</text>
+<text x="36" y="438" font-family="Arial" font-size="14" font-weight="700" fill="#111827">LA CARLOTA</text>
+<rect x="300" y="414" width="69.0" height="25" fill="#2ab7ca" rx="4"/>
+<text x="381.0" y="432" font-family="Arial" font-size="13" fill="#374151">827 apps | 97% approved</text>
+<text x="36" y="480" font-family="Arial" font-size="14" font-weight="700" fill="#111827">BACOLOD</text>
+<rect x="300" y="456" width="102.9" height="25" fill="#2ab7ca" rx="4"/>
+<text x="414.9" y="474" font-family="Arial" font-size="13" fill="#374151">1,233 apps | 92% approved</text>
+<text x="36" y="522" font-family="Arial" font-size="14" font-weight="700" fill="#111827">Unknown</text>
+<rect x="300" y="498" width="650.0" height="25" fill="#2ab7ca" rx="4"/>
+<text x="962.0" y="516" font-family="Arial" font-size="13" fill="#374151">7,790 apps | 92% approved</text>
+<text x="36" y="590" font-family="Arial" font-size="15" font-weight="700" fill="#111827">Stakeholder insight</text>
+<text x="36" y="616" font-family="Arial" font-size="14" fill="#4b5563">High-volume branches deserve the first review because small process changes there can move the most applications. Compare approval rates to spot coaching or policy-alignment opportunities.</text>
+</svg>

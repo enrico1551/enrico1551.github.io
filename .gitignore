@@ -1,12 +1,14 @@
-_builder/
-.edge-profile/
-.edge-profile-dashboard/
-preview-*.png
-*.inspect.ndjson
-Alagao Enrico-.jpg
-barchart starbucks.png
-insights summary.png
-kommunitree-updated-*.jpg
-new pics/
-~$*.docx
-Enrico_Augusto_Alagao_resume.docx
+# Private analysis inputs stay out of version control.
+data/
+work/
+raw-notebooks/
+.ipynb_checkpoints/
+*.csv
+*.xls
+*.xlsx
+*.ipynb
+
+# Local development artifacts
+.venv/
+__pycache__/
+*.py[cod]

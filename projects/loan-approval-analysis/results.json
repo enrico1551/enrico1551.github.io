@@ -1,0 +1,35 @@
+{
+  "status": "user-supplied; not verified against the current local extract",
+  "population": {
+    "applicationsWithClearOutcome": 10993,
+    "approved": 9973,
+    "cancelled": 1020,
+    "approvalRate": 0.907
+  },
+  "target": "Approved (1) versus cancelled (0)",
+  "split": {
+    "method": "stratified train/test split",
+    "testSize": 0.2,
+    "randomState": 42
+  },
+  "metrics": [
+    {"model": "Extra Trees", "accuracy": 0.799, "precisionApproved": 0.925, "recallApproved": 0.847, "f1Approved": 0.884, "macroF1": 0.558, "rocAuc": 0.674},
+    {"model": "Random Forest", "accuracy": 0.761, "precisionApproved": 0.932, "recallApproved": 0.794, "f1Approved": 0.858, "macroF1": 0.556, "rocAuc": 0.672},
+    {"model": "Logistic Regression", "accuracy": 0.751, "precisionApproved": 0.934, "recallApproved": 0.781, "f1Approved": 0.851, "macroF1": 0.553, "rocAuc": 0.672},
+    {"model": "XGBoost", "accuracy": 0.756, "precisionApproved": 0.929, "recallApproved": 0.791, "f1Approved": 0.855, "macroF1": 0.546, "rocAuc": 0.670},
+    {"model": "Majority baseline", "accuracy": 0.907, "precisionApproved": 0.907, "recallApproved": 1.000, "f1Approved": 0.951, "macroF1": 0.476, "rocAuc": 0.500}
+  ],
+  "bestModel": "Extra Trees",
+  "confusionMatrix": {
+    "actualClasses": ["Approved", "Cancelled"],
+    "predictedClasses": ["Approved", "Cancelled"],
+    "counts": null,
+    "note": "[TODO: add verified held-out confusion-matrix counts from the matching model run]"
+  },
+  "limitations": [
+    "Single stratified split; no hyperparameter tuning or cross-validation",
+    "No probability calibration",
+    "Approximately 1,020 minority-class examples in the reported modeling population",
+    "Current local files do not reproduce the reported 10,993-row modeling subset"
+  ]
+}

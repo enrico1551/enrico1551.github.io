@@ -21,10 +21,10 @@
   ],
   "bestModel": "Extra Trees",
   "confusionMatrix": {
-    "actualClasses": ["Approved", "Cancelled"],
-    "predictedClasses": ["Approved", "Cancelled"],
-    "counts": null,
-    "note": "[TODO: add verified held-out confusion-matrix counts from the matching model run]"
+    "actualClasses": ["Cancelled", "Approved"],
+    "predictedClasses": ["Cancelled", "Approved"],
+    "counts": [[67, 137], [306, 1689]],
+    "note": "Counts read from the Extra Trees held-out confusion-matrix figure in the supplied modeling notebook. Rows are actual classes; columns are predicted classes."
   },
   "limitations": [
     "Single stratified split; no hyperparameter tuning or cross-validation",

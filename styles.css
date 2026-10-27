@@ -210,9 +210,10 @@ h3 {
 
 .hero-portrait img {
   width: min(420px, 78vw);
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
   border: 10px solid #fff;
   border-radius: 8px;
   box-shadow: var(--shadow);
@@ -1056,21 +1057,6 @@ code {
 
 .model-details h4:not(:first-child) {
   margin-top: 24px;
-}
-
-.todo {
-  color: #7c2d12;
-}
-
-.availability {
-  margin: 16px 0 0;
-  font-weight: 700;
-}
-
-.social-todos {
-  flex-basis: 100%;
-  margin: 4px 0 0;
-  font-size: 0.86rem;
 }
 
 .education-block {

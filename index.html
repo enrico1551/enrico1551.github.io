@@ -37,12 +37,11 @@
         <div class="hero-copy">
           <p class="eyebrow">Data Professional | Analytics, BI &amp; Data Engineering</p>
           <h1 id="hero-title">Dashboards, reports, and business insights from raw data.</h1>
-          <p class="hero-lede">I turn raw data into dashboards, reports, KPI tracking, and decisions for non-technical stakeholders. My core stack includes SQL, Python, Apache Superset, Databricks, and Snowflake for analysis, validation, and reporting.</p>
+          <p class="hero-lede">I bring 2 years of experience using operational data to support reporting, performance monitoring, and business decisions. I work with SQL, Python, Apache Superset, Databricks, and Snowflake across data preparation, analysis, and reporting.</p>
           <div class="hero-actions">
             <a class="button primary" href="#projects">View Work Samples</a>
             <a class="button ghost resume-download" href="Enrico_Alagao_Resume.pdf" data-fallback="Enrico_Alagao_Resume.docx">Download Resume (PDF)</a>
           </div>
-          <p class="availability todo">[TODO: availability line, e.g. “Available from YYYY-MM-DD”]</p>
           <div class="quick-stats" aria-label="Career highlights">
             <div><strong>Aug 2024–Oct 2026</strong><span>Data Scientist · analytics-focused work</span></div>
             <div><strong>SQL + Python</strong><span>Data cleaning, validation, and analysis</span></div>
@@ -50,7 +49,7 @@
           </div>
         </div>
         <figure class="hero-portrait">
-          <img src="assets/portrait.jpg" alt="Portrait of Enrico Augusto Alagao" width="2000" height="3008" fetchpriority="high" decoding="async" />
+            <img src="assets/portrait.jpg" alt="Portrait of Enrico Augusto Alagao" width="1344" height="1344" fetchpriority="high" decoding="async" />
         </figure>
       </section>
 
@@ -58,7 +57,7 @@
         <div><p class="eyebrow">About me</p><h2 id="about-title">Analysis for teams that need decisions, not just charts.</h2></div>
         <div class="about-copy" data-editable="true">
           <!-- Editable copy: update this paragraph directly in index.html. -->
-          <p>I work with SQL and Python alongside Superset, Databricks, and Snowflake. I turn data into clear decisions for non-technical stakeholders through analysis, dashboards, and reporting. I am especially interested in lending, operations, and environmental analytics. I am looking for data analyst, business analyst, reporting, and dashboard roles.</p>
+          <p>I have 2 years of experience working with operational data to support reporting, performance monitoring, and business decisions. I use SQL and Python for data cleaning, transformation, validation, and exploratory analysis, with hands-on experience in Databricks, Snowflake, and Apache Superset. I combine data preparation and modeling with KPI reporting, trend analysis, and clear communication for non-technical stakeholders. I am interested in data analyst, business analyst, reporting, dashboard, and data engineering roles.</p>
         </div>
       </section>
 
@@ -175,23 +174,23 @@
             <p>Numeric preprocessing: median imputation and standard scaling. Categorical preprocessing: most-frequent imputation and one-hot encoding. Class weighting was used for imbalance. Decision and workflow fields, approval status, and remarks were excluded to avoid target leakage.</p>
             <p>Compared models: majority baseline, Logistic Regression, Random Forest, Extra Trees, and XGBoost. Limitations: one split, no tuning or cross-validation, no probability calibration, and approximately 1,020 minority-class examples. Do not use these results to make lending decisions.</p>
             <h4>Extra Trees confusion matrix</h4>
-            <div id="confusionMatrix" class="todo" aria-live="polite"></div>
+            <div id="confusionMatrix" aria-live="polite"></div>
           </div>
           <p class="confidential-note">Client name and data anonymized for confidentiality.</p>
         </section>
 
         <div class="analysis-grid schematic-grid" aria-label="Illustrative project diagrams">
           <figure class="analysis-card">
-            <button class="lightbox-trigger" type="button" aria-label="Enlarge monthly trend analysis illustration" data-caption="Illustrative monthly trend layout; values are loaded from the aggregate data file."><img src="assets/loan-trend-analysis.svg" alt="Illustrative monthly application and rolling-average chart layout, with no values shown" width="1200" height="680" loading="lazy" decoding="async" /></button>
-            <figcaption><strong>Trend analysis layout.</strong> The live chart above reads its values from the monthly aggregate JSON.</figcaption>
+            <button class="lightbox-trigger" type="button" aria-label="Enlarge monthly trend analysis illustration" data-caption="Illustration of monthly application volume and its three-month rolling average. The charts above show the calculated results."><img src="assets/loan-trend-analysis.svg" alt="Illustrative monthly application chart with a three-month rolling average; not a separate result" width="1200" height="680" loading="lazy" decoding="async" /></button>
+            <figcaption><strong>How to read the trend charts.</strong> This is a layout illustration. The interactive charts above show the calculated monthly application counts and rolling average.</figcaption>
           </figure>
           <figure class="analysis-card">
-            <button class="lightbox-trigger" type="button" aria-label="Enlarge anonymized operations grouping illustration" data-caption="Illustrative group labels only; no group-level values are published."><img src="assets/loan-group-insight.svg" alt="Illustrative anonymized group comparison with no group-level values" width="1200" height="680" loading="lazy" decoding="async" /></button>
-            <figcaption><strong>Operational grouping.</strong> Segment names and group-level values are withheld.</figcaption>
+            <button class="lightbox-trigger" type="button" aria-label="Enlarge anonymized operations grouping illustration" data-caption="Example of comparing anonymized operational segments. The group labels are generic and no segment values are shown."><img src="assets/loan-group-insight.svg" alt="Illustrative comparison of generic operational groups A, B, and C; no project values are shown" width="1200" height="680" loading="lazy" decoding="async" /></button>
+            <figcaption><strong>Example of segment comparison.</strong> Group A, B, and C are generic labels showing how an analyst might compare anonymized operational segments. They are not actual project groups or results.</figcaption>
           </figure>
           <figure class="analysis-card">
-            <button class="lightbox-trigger" type="button" aria-label="Enlarge outcome decision support illustration" data-caption="Illustrative outcome categories; unknown or ambiguous outcomes remain separate."><img src="assets/loan-decision-support.svg" alt="Illustration of approved, cancelled, and separately reported unknown outcomes" width="1200" height="680" loading="lazy" decoding="async" /></button>
-            <figcaption><strong>Outcome review.</strong> Rates use the same clear-outcome denominator across periods.</figcaption>
+            <button class="lightbox-trigger" type="button" aria-label="Enlarge outcome decision support illustration" data-caption="Approved and cancelled applications form the approval-rate denominator. Pending, correction, blank, and conflicting outcomes are tracked separately."><img src="assets/loan-decision-support.svg" alt="Illustration showing approved and cancelled outcomes, with pending and ambiguous outcomes kept separate" width="1200" height="680" loading="lazy" decoding="async" /></button>
+            <figcaption><strong>Which outcomes count in the rate.</strong> Approval rate compares approved with cancelled applications. Pending, correction, blank, and conflicting outcomes are reported separately.</figcaption>
           </figure>
         </div>
       </section>
@@ -308,9 +307,9 @@
       <section class="section skills-section" id="skills" aria-labelledby="skills-title">
         <div class="section-heading compact"><p class="eyebrow">Technical Profile</p><h2 id="skills-title">Tools I use across the analysis workflow.</h2></div>
         <div class="skills-layout">
-          <div class="skill-column"><h3>SQL</h3><ul><li>PostgreSQL</li><li>Spark SQL</li><li>Data cleaning and validation</li><li>Data quality checks</li></ul><p class="used-in"><strong>Used in:</strong> Loan Approval Modeling and EDA; Environmental Records Analytics.</p></div>
-          <div class="skill-column"><h3>Python and Analysis</h3><ul><li>Pandas and NumPy</li><li>Matplotlib and Seaborn</li><li>EDA and trend analysis</li><li>Business insight generation</li></ul><p class="used-in"><strong>Used in:</strong> Loan Application Trend Analysis; Environmental Records Analytics.</p></div>
-          <div class="skill-column"><h3>Reporting and Platforms</h3><ul><li>Apache Superset dashboards</li><li>Databricks and Snowflake</li><li>KPI reporting</li><li>Stakeholder communication</li></ul><p class="used-in"><strong>Used in:</strong> Environmental Records Analytics; Station Performance Dashboard; public-dataset practice projects.</p></div>
+          <div class="skill-column"><h3>Languages and Data Preparation</h3><ul><li>SQL: PostgreSQL and Spark SQL</li><li>Python: Pandas and NumPy</li><li>Data cleaning, transformation, and validation</li><li>C# (foundational)</li></ul><p class="used-in"><strong>Used in:</strong> Loan Approval Modeling and EDA; Loan Application Trend Analysis.</p></div>
+          <div class="skill-column"><h3>Analytics and Engineering</h3><ul><li>Exploratory, trend, and statistical analysis</li><li>Matplotlib, Seaborn, and scikit-learn</li><li>Data quality checks and reporting datasets</li><li>Databricks, Snowflake, and Spark SQL</li></ul><p class="used-in"><strong>Used in:</strong> Loan Application Trend Analysis; Environmental Records Analytics.</p></div>
+          <div class="skill-column"><h3>BI and Business Analysis</h3><ul><li>Apache Superset dashboards and KPIs</li><li>Stakeholder reporting and requirements gathering</li><li>Business insights and recommendations</li><li>Power BI, Excel, and Jupyter notebooks</li></ul><p class="used-in"><strong>Used in:</strong> Environmental Records Analytics; Station Performance Dashboard; public-dataset practice projects.</p></div>
         </div>
       </section>
 
@@ -319,44 +318,43 @@
         <div class="cert-grid">
           <article>
             <img src="assets/cert-datacamp-sql.png" alt="Associate Data Analyst in SQL certificate image" width="1510" height="865" loading="lazy" decoding="async" />
-            <h3>Associate Data Analyst in SQL</h3><p>DataCamp · [TODO: date] · Verification: [TODO: verification URL]</p>
+            <h3>Associate Data Analyst in SQL</h3><p>DataCamp · 2026</p>
           </article>
           <article>
             <img src="assets/cert-data-science.jpg" alt="Python for Machine Learning and Data Science certificate image" width="2400" height="1786" loading="lazy" decoding="async" />
-            <h3>Python for Machine Learning and Data Science</h3><p>Pierian Data training · [TODO: date] · Verification: [TODO: verification URL]</p>
+            <h3>Python for Machine Learning and Data Science</h3><p>Pierian Data (Udemy) · June 2023</p>
           </article>
         </div>
-        <div class="education-block"><h3>Education</h3><p>[TODO: degree, school, years]</p></div>
+        <div class="education-block"><h3>Education</h3><p>Bachelor of Science in Information Technology · Iloilo Science and Technology University · 2019–2023</p></div>
       </section>
 
       <section class="section experience-section" id="experience" aria-labelledby="experience-title">
         <div class="section-heading"><div><p class="eyebrow">Experience</p><h2 id="experience-title">Professional background.</h2></div></div>
         <div class="timeline">
           <article>
-            <span>Aug 2024 - Oct 2026 <span class="todo">[TODO: confirm whether MeldCX end date should say “Present”]</span></span>
+            <span>Aug 2024 - Oct 2026</span>
             <h3>MeldCX Philippines | Data Scientist (analytics-focused)</h3>
             <ul>
-              <li>Cleaned and validated data with SQL and Python across [TODO: data volume].</li>
-              <li>Built dashboards and reports with Apache Superset, Databricks, and Snowflake: [TODO: number of dashboards/reports].</li>
-              <li>Analyzed trends and prepared stakeholder reporting for [TODO: stakeholder groups].</li>
-              <li>Added data quality checks and validation steps, with [TODO: hours saved or percentage improvement].</li>
+              <li>Developed Apache Superset dashboards and reports to support stakeholder reporting, improve KPI visibility, and help teams review business trends.</li>
+              <li>Cleaned, transformed, and validated operational data using SQL, Python, and Spark SQL across Databricks and Snowflake.</li>
+              <li>Conducted exploratory and trend analysis to identify patterns and generate insights for planning, performance monitoring, and process review.</li>
+              <li>Communicated dashboard findings and technical results to non-technical stakeholders, translating analysis into clear takeaways and next steps.</li>
             </ul>
           </article>
           <article>
             <span>Feb 2023 - May 2023</span><h3>Kabertek Inc. | Student Intern</h3>
-            <p>Validated and encoded information while maintaining data integrity and confidentiality.</p>
+            <ul><li>Validated and encoded information according to data-handling guidelines, maintaining data integrity and confidentiality.</li><li>Supported enterprise system updates using C# and MVC.</li></ul>
           </article>
         </div>
       </section>
 
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
-        <div><p class="eyebrow">Contact</p><h2 id="contact-title">Open to data analyst, business analyst, reporting, and dashboard opportunities.</h2><p>Email: enricoalagao@gmail.com</p><!-- Phone number removed from public page. --></div>
+        <div><p class="eyebrow">Contact</p><h2 id="contact-title">Open to data analyst, business analyst, reporting, dashboard, and data engineering opportunities.</h2><p>Email: enricoalagao@gmail.com</p><!-- Phone number removed from public page. --></div>
         <div class="contact-actions">
           <a class="button primary" href="mailto:enricoalagao@gmail.com">Email Me</a>
           <a class="button ghost light resume-download" href="Enrico_Alagao_Resume.pdf" data-fallback="Enrico_Alagao_Resume.docx">Resume</a>
-          <a class="button ghost light social-link" hidden aria-hidden="true">LinkedIn</a>
+          <a class="button ghost light social-link" href="https://www.linkedin.com/in/enrico-augusto-alagao-ab14a2255/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a class="button ghost light social-link" hidden aria-hidden="true">GitHub</a>
-          <p class="social-todos todo">[TODO: add LinkedIn URL] · [TODO: add GitHub URL]</p>
         </div>
       </section>
     </main>

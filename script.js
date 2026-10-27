@@ -224,13 +224,32 @@ function updateModelResults(results) {
   const matrix = document.getElementById("confusionMatrix");
   matrix.replaceChildren();
   if (results.confusionMatrix?.counts) {
-    const counts = results.confusionMatrix.counts;
+    const { counts, actualClasses, predictedClasses } = results.confusionMatrix;
     const table = document.createElement("table");
-    table.innerHTML = '<caption>Actual vs predicted outcomes</caption><thead><tr><th scope="col">Actual / predicted</th><th scope="col">Approved</th><th scope="col">Cancelled</th></tr></thead><tbody></tbody>';
-    const body = table.querySelector("tbody");
-    [["Approved", counts.actualApprovedPredictedApproved, counts.actualApprovedPredictedCancelled], ["Cancelled", counts.actualCancelledPredictedApproved, counts.actualCancelledPredictedCancelled]].forEach((values) => {
+    const caption = table.createCaption();
+    caption.textContent = "Actual vs predicted outcomes";
+    const head = table.createTHead().insertRow();
+    const corner = document.createElement("th");
+    corner.scope = "col";
+    corner.textContent = "Actual / predicted";
+    head.append(corner);
+    predictedClasses.forEach((label) => {
+      const cell = document.createElement("th");
+      cell.scope = "col";
+      cell.textContent = label;
+      head.append(cell);
+    });
+    const body = table.createTBody();
+    actualClasses.forEach((label, rowIndex) => {
       const row = body.insertRow();
-      values.forEach((value, index) => { const cell = row.insertCell(); cell.textContent = index === 0 ? value : formatCount(value); });
+      const heading = document.createElement("th");
+      heading.scope = "row";
+      heading.textContent = label;
+      row.append(heading);
+      predictedClasses.forEach((_, columnIndex) => {
+        const cell = row.insertCell();
+        cell.textContent = formatCount(counts[rowIndex][columnIndex]);
+      });
     });
     matrix.append(table);
   } else {

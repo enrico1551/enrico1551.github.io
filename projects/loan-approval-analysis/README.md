@@ -27,7 +27,7 @@ The local files supplied with this working copy produce a different application 
 
 The reported preprocessing uses median imputation and standard scaling for numeric features, most-frequent imputation and one-hot encoding for categorical features, and class weighting. Decision/workflow fields were excluded to avoid target leakage. Reported features include application-time financial and demographic fields and categorical application attributes; no branch- or employer-level breakdown is published.
 
-**Confusion matrix:** not included yet. Reconcile the original model run and verify held-out counts before publishing a matrix.
+The Extra Trees held-out confusion matrix, read from the matching model figure in the supplied notebook, uses rows for actual classes and columns for predicted classes in the order Cancelled, Approved: `[[67, 137], [306, 1,689]]`. This shows 67 cancelled cases correctly classified as cancelled, 137 cancelled cases predicted approved, 306 approved cases predicted cancelled, and 1,689 approved cases correctly classified as approved.
 
 Limitations include a single split, no tuning or cross-validation, no probability calibration, and approximately 1,020 examples in the minority class. Results should not be used as lending decisions.
 

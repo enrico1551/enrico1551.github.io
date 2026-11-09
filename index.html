@@ -27,7 +27,7 @@
         <span class="brand-mark">EA</span><span>Enrico Alagao</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#projects">Projects</a><a href="#work">Work</a><a href="#about">About</a>
+        <a href="projects.html">Projects</a><a href="#work">Work</a><a href="#about">About</a>
         <a href="#certs">Certs</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
       </nav>
     </header>
@@ -39,7 +39,7 @@
           <h1 id="hero-title">Dashboards, reports, and business insights from raw data.</h1>
           <p class="hero-lede">I bring 2 years of experience using operational data to support reporting, performance monitoring, and business decisions. I work with SQL, Python, Apache Superset, Databricks, and Snowflake across data preparation, analysis, and reporting.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#projects">View Work Samples</a>
+            <a class="button primary" href="projects.html">View Projects</a>
             <a class="button ghost resume-download" href="Enrico_Alagao_Resume.pdf" data-fallback="Enrico_Alagao_Resume.docx">Download Resume (PDF)</a>
           </div>
           <div class="quick-stats" aria-label="Career highlights">
@@ -63,10 +63,12 @@
 
       <section class="section loan-project-section" id="projects" aria-labelledby="loan-title">
         <div class="section-heading compact">
-          <p class="eyebrow">Work Project / Lending Analytics</p>
-          <h2 id="loan-title">Loan Approval Modeling and EDA</h2>
-          <p>This project reviews application outcomes and monthly demand using aggregate data. No borrower-level or group-identifying detail is published.</p>
+          <p class="eyebrow">Featured Project / Lending Analytics</p>
+          <h2 id="loan-title">Loan Application Analysis</h2>
+          <p>A concise review of loan outcomes, monthly demand, and exploratory approval models. Figures come from separate analysis extracts and should be read separately.</p>
         </div>
+        <details class="project-detail-toggle">
+          <summary>Explore the analysis and methodology</summary>
         <div class="population-note" id="populationNote">
           <h3>Population definitions</h3>
           <p>The earlier portfolio summary reports 18,782 clear outcomes and 91.3% approval. The exploratory modeling brief reports a separate 10,993-application subset (9,973 approved, 1,020 cancelled; 90.7%). Current local source files produce a different population; these figures are attributed to their original analysis versions and should not be combined.</p>
@@ -178,7 +180,7 @@
           </div>
           <p class="confidential-note">Client name and data anonymized for confidentiality.</p>
         </section>
-
+        </details>
       </section>
 
       <section class="section section-split" id="work" aria-labelledby="work-title">
@@ -216,25 +218,41 @@
               <div class="tag-row"><span>Stakeholder summary</span><span>KPI storytelling</span></div>
             </div>
           </article>
+          <article class="project-card linked-project-card">
+            <a class="project-media" href="projects/customer-churn-support/index.html" aria-label="View Customer Churn and Support Dashboard case study"><img src="assets/customer-churn-support/churn-dashboard.png" alt="Customer churn dashboard filtered to fiber optic customers" loading="lazy" decoding="async" /></a>
+            <div class="project-content">
+              <p class="project-kicker">Power BI / Telecom</p>
+              <h3><a href="projects/customer-churn-support/index.html">Customer Churn &amp; Support Dashboard</a></h3>
+              <p>A telecom churn analysis focused on support ticket volume, contract type, tenure, and monthly charges.</p>
+            </div>
+          </article>
+          <article class="project-card linked-project-card">
+            <a class="project-media" href="projects/call-center-dashboard/index.html" aria-label="View Call Center Dashboard case study"><img src="assets/call-center-dashboard/call-center-overview.png" alt="Call center overview dashboard showing Q1 2021 service metrics" loading="lazy" decoding="async" /></a>
+            <div class="project-content">
+              <p class="project-kicker">Power BI / Telecom</p>
+              <h3><a href="projects/call-center-dashboard/index.html">Call Center Dashboard</a></h3>
+              <p>A three-page report on call volume, agent performance, and customer experience across 5,000 Q1 2021 calls.</p>
+            </div>
+          </article>
         </div>
 
-        <div class="section-heading compact gallery-heading">
+        <div class="section-heading compact gallery-heading" id="superset-snapshots">
           <p class="eyebrow">Portfolio screenshots</p>
           <h2>Dashboard work samples.</h2>
           <p>These original screenshots are included as supplied. Some may show organization branding or record-level details; review them before sharing the site publicly.</p>
         </div>
         <div class="analysis-grid screenshot-gallery" aria-label="Dashboard screenshots">
-          <figure class="analysis-card wide">
+          <figure class="analysis-card wide snapshot">
             <button class="lightbox-trigger" type="button" aria-label="Enlarge analytics dashboard screenshot" data-caption="Analytics dashboard screenshot, shown as supplied."><img src="assets/analytics-dashboard.jpg" alt="Screenshot of an analytics dashboard with charts and summary panels" width="2550" height="13603" loading="lazy" decoding="async" /></button>
-            <figcaption>Analytics dashboard overview</figcaption>
+            <figcaption>Account leaderboard snapshot · Select to open the full dashboard.</figcaption>
           </figure>
           <figure class="analysis-card">
             <button class="lightbox-trigger" type="button" aria-label="Enlarge environmental records category chart screenshot" data-caption="Environmental records category chart screenshot, shown as supplied."><img src="assets/env-records-category-mix.jpg" alt="Environmental records dashboard screenshot showing category mix and ranked charts" width="2550" height="1250" loading="lazy" decoding="async" /></button>
             <figcaption>Environmental records: category mix</figcaption>
           </figure>
-          <figure class="analysis-card">
+          <figure class="analysis-card snapshot">
             <button class="lightbox-trigger" type="button" aria-label="Enlarge environmental records detail table screenshot" data-caption="Records table screenshot. It may show coordinates, species or site names, and contributor names."><img src="assets/env-records-detail-table.jpg" alt="Environmental records table screenshot; may show coordinates, species or site names, and contributor names" width="2550" height="4650" loading="lazy" decoding="async" /></button>
-            <figcaption>Environmental records: detail table. This image may show coordinates, species or site names, and contributor names.</figcaption>
+            <figcaption>Tree records list snapshot · Select to open the full table.</figcaption>
           </figure>
           <figure class="analysis-card">
             <button class="lightbox-trigger" type="button" aria-label="Enlarge environmental records ranking screenshot" data-caption="Environmental records ranking screenshot, shown as supplied."><img src="assets/env-records-ranking.jpg" alt="Environmental records dashboard screenshot showing ranked categories" width="2550" height="4050" loading="lazy" decoding="async" /></button>

@@ -63,123 +63,86 @@
 
       <section class="section loan-project-section" id="projects" aria-labelledby="loan-title">
         <div class="section-heading compact">
-          <p class="eyebrow">Featured Project / Lending Analytics</p>
-          <h2 id="loan-title">Loan Application Analysis</h2>
-          <p>A concise review of loan outcomes, monthly demand, and exploratory approval models. Figures come from separate analysis extracts and should be read separately.</p>
-        </div>
-        <details class="project-detail-toggle">
-          <summary>Explore the analysis and methodology</summary>
-        <div class="population-note" id="populationNote">
-          <h3>Population definitions</h3>
-          <p>The earlier portfolio summary reports 18,782 clear outcomes and 91.3% approval. The exploratory modeling brief reports a separate 10,993-application subset (9,973 approved, 1,020 cancelled; 90.7%). Current local source files produce a different population; these figures are attributed to their original analysis versions and should not be combined.</p>
-          <p id="sourcePopulationSummary" aria-live="polite">Loading aggregate source summary…</p>
-          <p class="confidential-note">Client name and data anonymized for confidentiality.</p>
+          <p class="eyebrow">Featured Project</p>
+          <h2 id="loan-title">Loan Approval: What Happens to Loan Applications?</h2>
+          <p class="population-mismatch">Figures come from two analysis versions and are not combined.</p>
         </div>
 
-        <section class="trend-dashboard" id="trend-analysis" aria-labelledby="trend-title">
-          <div class="section-heading compact">
-            <p class="eyebrow">Monthly demand and outcome review</p>
-            <h3 id="trend-title">Loan Application Trend Analysis</h3>
-            <p>Monthly application counts, clear outcomes, and approval rate. Partial edge months are flagged; missing periods are shown as gaps rather than zero activity.</p>
-          </div>
-          <div class="trend-controls">
-            <label for="trendYearFilter">Filter by year</label>
-            <select id="trendYearFilter"><option value="all">All available periods</option></select>
-            <span id="trendRange" class="muted" aria-live="polite">Loading date range…</span>
-          </div>
-          <div class="metric-row light trend-kpis" aria-live="polite">
-            <div><span>Applications</span><strong id="kpiApplications">—</strong></div>
-            <div><span>Approved</span><strong id="kpiApproved">—</strong></div>
-            <div><span>Cancelled</span><strong id="kpiCancelled">—</strong></div>
-            <div><span>Approval rate</span><strong id="kpiRate">—</strong></div>
-            <div><span>Unknown / pending</span><strong id="kpiUnknown">—</strong></div>
-            <div><span>Period change</span><strong id="kpiChange">—</strong></div>
-          </div>
-          <p class="formula-note">Applications count distinct application IDs. Approval rate = approved ÷ (approved + cancelled); unknown and ambiguous outcomes are reported separately. Period change compares adjacent, non-partial months.</p>
-
-          <div class="trend-charts">
-            <article class="chart-panel f1-panel">
-              <h4>Application volume</h4>
-              <p class="chart-note">Monthly application counts and trailing 3-month average.</p>
-              <canvas id="trendVolumeChart" width="960" height="320" role="img" aria-label="Monthly application volume and three-month average"></canvas>
-              <output id="trendVolumeTooltip" class="chart-tooltip" aria-live="polite">Point to a month for details. The table below provides keyboard-accessible values.</output>
-            </article>
-            <article class="chart-panel f1-panel">
-              <h4>Approved and cancelled applications</h4>
-              <p class="chart-note">Outcome counts use the same application population and period.</p>
-              <canvas id="trendOutcomeChart" width="960" height="320" role="img" aria-label="Monthly approved and cancelled application counts"></canvas>
-              <output id="trendOutcomeTooltip" class="chart-tooltip" aria-live="polite">Point to a month for details.</output>
-            </article>
-            <article class="chart-panel f1-panel wide">
-              <h4>Approval rate by month</h4>
-              <p class="chart-note">Approved ÷ (approved + cancelled); unknown and ambiguous outcomes are excluded.</p>
-              <canvas id="trendRateChart" width="960" height="320" role="img" aria-label="Monthly approval rate among clear outcomes"></canvas>
-              <output id="trendRateTooltip" class="chart-tooltip" aria-live="polite">Point to a month for details.</output>
-            </article>
-          </div>
-
-          <div class="story-grid" aria-live="polite">
-            <article><h4>What happened</h4><p id="storyWhat">Loading calculated highlights…</p></article>
-            <article><h4>Why it might matter</h4><p>Higher monthly volume may affect review capacity, while the approval rate measures a different part of the workflow. These are separate signals, not evidence of cause.</p></article>
-            <article><h4>What to investigate next</h4><p>Compare higher-volume periods with queue age and processing time before attributing changes to staffing, policy, or customer behavior. Those drivers are not present in this aggregate extract.</p></article>
-          </div>
-
-          <details class="data-table-details">
-            <summary>View monthly aggregate data</summary>
-            <div class="table-scroll">
-              <table>
-                <caption>Monthly application counts and rates from the supplied local extract</caption>
-                <thead><tr><th scope="col">Month</th><th scope="col">Applications</th><th scope="col">Approved</th><th scope="col">Cancelled</th><th scope="col">Unknown / pending</th><th scope="col">Approval rate</th><th scope="col">3-month average</th><th scope="col">Change</th><th scope="col">Coverage</th></tr></thead>
-                <tbody id="trendTableBody"><tr><td colspan="9">Loading aggregate data…</td></tr></tbody>
-              </table>
-            </div>
-          </details>
-
-          <div class="methodology">
-            <h4>Methodology and limitations</h4>
-            <ul>
-              <li>Source date: <code>Trans Date</code>, parsed strictly as m/d/yyyy. <span id="trendDateAudit">Loading date validation…</span></li>
-              <li><span id="duplicateSummary">Loading duplicate and outcome checks…</span></li>
-              <li><span id="seasonalitySummary">Loading period coverage and seasonality note…</span></li>
-              <li>Monthly totals include unknown/pending outcomes. Approval rate excludes unknown and ambiguous outcomes. Partial date-range edge months are excluded from period-change and moving-average calculations.</li>
-              <li>The earlier 18,782 / 91.3% summary and 10,993-row model subset do not match this source extract. <span id="joinedPopulationSummary">Loading joined population…</span> Population definitions and file versions need reconciliation.</li>
-            </ul>
-          </div>
+        <section class="loan-glance" aria-labelledby="loan-glance-title">
+          <h3 id="loan-glance-title">At a glance</h3>
+          <dl>
+            <div><dt>The question</dt><dd>Out of everyone who applies for a loan, how many get approved, and can we predict who won't?</dd></div>
+            <div><dt>What I did</dt><dd>Looked at loan applications month by month, then tested whether a computer model could predict which ones get cancelled.</dd></div>
+            <div><dt>What I found</dt><dd>About 9 out of 10 applications get approved. The model was only slightly better than guessing at spotting cancellations.</dd></div>
+            <div><dt>What it means</dt><dd>The application form alone doesn't explain why people cancel. Other factors, like how long processing takes, probably matter.</dd></div>
+            <div><dt>What I'd do next</dt><dd>Add processing-time and queue data to find the real reasons for cancellations.</dd></div>
+          </dl>
         </section>
 
-        <section class="modeling-section" aria-labelledby="model-title">
-          <div class="section-heading compact">
-            <p class="eyebrow">Exploratory classification</p>
-            <h3 id="model-title">Predicting Loan Approval (Exploratory Modeling)</h3>
-            <p>Results below are the exact values supplied for a separate modeling subset. They have not been reproduced from the current local extract because the populations do not match.</p>
-          </div>
-          <div class="model-summary">
-            <p><strong>Modeling subset:</strong> 10,993 applications with clear outcomes (9,973 approved, 1,020 cancelled; 90.7% approved). Target: approved (1) vs cancelled (0). Stratified 80/20 train/test split with random_state=42.</p>
-            <p>The majority baseline has the highest raw accuracy because approved cases dominate the subset, so accuracy alone is misleading. Macro-F1 weights both classes equally; models are compared by macro-F1 and ROC-AUC. Extra Trees ranked highest on both supplied measures (0.558 and 0.674). ROC-AUC around 0.67 suggests limited separation from application-time fields. Workflow or customer factors could contribute to cancellations, but that is a hypothesis to test, not a conclusion.</p>
-          </div>
-          <div class="model-grid">
-            <article class="chart-panel f1-panel">
-              <h4>Macro-F1 and ROC-AUC comparison</h4>
-              <canvas id="modelMetricsChart" width="960" height="360" role="img" aria-label="Model comparison using macro F1 and ROC AUC from the supplied results JSON"></canvas>
-            </article>
-            <div class="table-scroll">
-              <table>
-                <caption>Held-out test metrics from the supplied project brief</caption>
-                <thead><tr><th scope="col">Model</th><th scope="col">Accuracy</th><th scope="col">Precision (approved)</th><th scope="col">Recall (approved)</th><th scope="col">F1 (approved)</th><th scope="col">Macro-F1</th><th scope="col">ROC-AUC</th></tr></thead>
-                <tbody id="modelMetricsBody"><tr><td colspan="7">Loading model results…</td></tr></tbody>
-              </table>
+        <div class="loan-story-blocks">
+          <article class="loan-story-block" aria-labelledby="loan-monthly-title">
+            <h3 id="loan-monthly-title">How many people apply, and how many are approved?</h3>
+            <p>Each month, I counted how many loan applications came in and how many were approved or cancelled. Most are approved, about 9 out of 10. Busy months mean more applications to review, but busy months don't necessarily change the approval rate.</p>
+            <div class="chart-panel f1-panel loan-main-visual">
+              <h4>Monthly applications</h4>
+              <p class="chart-note">Applications per month and a three-month average.</p>
+              <canvas id="trendVolumeChart" width="960" height="320" role="img" aria-label="Monthly loan application counts and three-month average"></canvas>
+              <output id="trendVolumeTooltip" class="chart-tooltip" aria-live="polite">Point to a month for details. Technical details include a keyboard-accessible data table.</output>
             </div>
+          </article>
+          <article class="loan-story-block" aria-labelledby="loan-model-title">
+            <h3 id="loan-model-title">Can we predict who gets cancelled?</h3>
+            <p>I trained several computer models to guess whether an application would be approved or cancelled, using only the information on the application. The best one was only a little better than a coin flip at spotting cancellations. That's a useful result: it tells us the reasons for cancellation aren't on the application form, so we'd need new data to find them.</p>
+          </article>
+          <article class="loan-story-block" aria-labelledby="loan-next-title">
+            <h3 id="loan-next-title">What I'd look at next</h3>
+            <p>Compare busy months against how long applications wait in the queue and how long they take to process, before blaming staffing, policy, or customer behavior.</p>
+          </article>
+        </div>
+        <p class="confidential-note loan-footer-note">Client name and data anonymized for confidentiality.</p>
+
+        <details class="technical-details">
+          <summary>Technical details</summary>
+          <div class="technical-content">
+            <div class="population-note" id="populationNote">
+              <h3>Population definitions</h3>
+              <p>The earlier portfolio summary reports 18,782 clear outcomes and 91.3% approval. The exploratory modeling brief reports a separate 10,993-application subset (9,973 approved, 1,020 cancelled; 90.7%). Current local source files produce a different population; these figures are attributed to their original analysis versions and should not be combined.</p>
+              <p id="sourcePopulationSummary" aria-live="polite">Loading aggregate source summary…</p>
+              <p class="confidential-note">Client name and data anonymized for confidentiality.</p>
+            </div>
+
+            <section class="trend-dashboard" id="trend-analysis" aria-labelledby="trend-title">
+              <div class="section-heading compact">
+                <p class="eyebrow">Monthly demand and outcome review</p>
+                <h3 id="trend-title">Loan Application Trend Analysis</h3>
+                <p>Monthly application counts, clear outcomes, and approval rate. Partial edge months are flagged; missing periods are shown as gaps rather than zero activity.</p>
+              </div>
+              <div class="trend-controls">
+                <label for="trendYearFilter">Filter by year</label>
+                <select id="trendYearFilter"><option value="all">All available periods</option></select>
+                <span id="trendRange" class="muted" aria-live="polite">Loading date range…</span>
+              </div>
+              <div class="metric-row light trend-kpis" aria-live="polite">
+                <div><span>Applications</span><strong id="kpiApplications">—</strong></div><div><span>Approved</span><strong id="kpiApproved">—</strong></div><div><span>Cancelled</span><strong id="kpiCancelled">—</strong></div><div><span>Approval rate</span><strong id="kpiRate">—</strong></div><div><span>Unknown / pending</span><strong id="kpiUnknown">—</strong></div><div><span>Period change</span><strong id="kpiChange">—</strong></div>
+              </div>
+              <p class="formula-note">Applications count distinct application IDs. Approval rate = approved ÷ (approved + cancelled); unknown and ambiguous outcomes are reported separately. Period change compares adjacent, non-partial months.</p>
+              <div class="trend-charts">
+                <article class="chart-panel f1-panel"><h4>Approved and cancelled applications</h4><p class="chart-note">Outcome counts use the same application population and period.</p><canvas id="trendOutcomeChart" width="960" height="320" role="img" aria-label="Monthly approved and cancelled application counts"></canvas><output id="trendOutcomeTooltip" class="chart-tooltip" aria-live="polite">Point to a month for details.</output></article>
+                <article class="chart-panel f1-panel wide"><h4>Approval rate by month</h4><p class="chart-note">Approved ÷ (approved + cancelled); unknown and ambiguous outcomes are excluded.</p><canvas id="trendRateChart" width="960" height="320" role="img" aria-label="Monthly approval rate among clear outcomes"></canvas><output id="trendRateTooltip" class="chart-tooltip" aria-live="polite">Point to a month for details.</output></article>
+              </div>
+              <div class="story-grid" aria-live="polite"><article><h4>What happened</h4><p id="storyWhat">Loading calculated highlights…</p></article><article><h4>Why it might matter</h4><p>Higher monthly volume may affect review capacity, while the approval rate measures a different part of the workflow. These are separate signals, not evidence of cause.</p></article><article><h4>What to investigate next</h4><p>Compare higher-volume periods with queue age and processing time before attributing changes to staffing, policy, or customer behavior. Those drivers are not present in this aggregate extract.</p></article></div>
+              <div class="data-table-details"><h4>Monthly aggregate data</h4><div class="table-scroll"><table><caption>Monthly application counts and rates from the supplied local extract</caption><thead><tr><th scope="col">Month</th><th scope="col">Applications</th><th scope="col">Approved</th><th scope="col">Cancelled</th><th scope="col">Unknown / pending</th><th scope="col">Approval rate</th><th scope="col">3-month average</th><th scope="col">Change</th><th scope="col">Coverage</th></tr></thead><tbody id="trendTableBody"><tr><td colspan="9">Loading aggregate data…</td></tr></tbody></table></div></div>
+              <div class="methodology"><h4>Methodology and limitations</h4><ul><li>Source date: <code>Trans Date</code>, parsed strictly as m/d/yyyy. <span id="trendDateAudit">Loading date validation…</span></li><li><span id="duplicateSummary">Loading duplicate and outcome checks…</span></li><li><span id="seasonalitySummary">Loading period coverage and seasonality note…</span></li><li>Monthly totals include unknown/pending outcomes. Approval rate excludes unknown and ambiguous outcomes. Partial date-range edge months are excluded from period-change and moving-average calculations.</li><li>The earlier 18,782 / 91.3% summary and 10,993-row model subset do not match this source extract. <span id="joinedPopulationSummary">Loading joined population…</span> Population definitions and file versions need reconciliation.</li></ul></div>
+            </section>
+
+            <section class="modeling-section" aria-labelledby="model-title">
+              <div class="section-heading compact"><p class="eyebrow">Exploratory classification</p><h3 id="model-title">Predicting Loan Approval (Exploratory Modeling)</h3><p>Results below are the exact values supplied for a separate modeling subset. They have not been reproduced from the current local extract because the populations do not match.</p></div>
+              <div class="model-summary"><p><strong>Modeling subset:</strong> 10,993 applications with clear outcomes (9,973 approved, 1,020 cancelled; 90.7% approved). Target: approved (1) vs cancelled (0). Stratified 80/20 train/test split with random_state=42.</p><p>The majority baseline has the highest raw accuracy because approved cases dominate the subset, so accuracy alone is misleading. Macro-F1 weights both classes equally; models are compared by macro-F1 and ROC-AUC. Extra Trees ranked highest on both supplied measures (0.558 and 0.674). ROC-AUC around 0.67 suggests limited separation from application-time fields. Workflow or customer factors could contribute to cancellations, but that is a hypothesis to test, not a conclusion.</p></div>
+              <div class="model-grid"><article class="chart-panel f1-panel"><h4>Macro-F1 and ROC-AUC comparison</h4><canvas id="modelMetricsChart" width="960" height="360" role="img" aria-label="Model comparison using macro F1 and ROC AUC from the supplied results JSON"></canvas></article><div class="table-scroll"><table><caption>Held-out test metrics from the supplied project brief</caption><thead><tr><th scope="col">Model</th><th scope="col">Accuracy</th><th scope="col">Precision (approved)</th><th scope="col">Recall (approved)</th><th scope="col">F1 (approved)</th><th scope="col">Macro-F1</th><th scope="col">ROC-AUC</th></tr></thead><tbody id="modelMetricsBody"><tr><td colspan="7">Loading model results…</td></tr></tbody></table></div></div>
+              <div class="model-details"><h4>Features and evaluation</h4><p>Numeric application-time features: loan amount, monthly, rebate, gross loan, total interest, old account, total deductions, net amount, term, interest rate, pension amount, age at application (clipped to 18–100), number of months, and dependents. Categorical features: loan type, branch, gender, civil status, pension code, purpose, employer, bank code, withdraw-all flag, and residence certificate. Group-level names and values are not displayed.</p><p>Numeric preprocessing: median imputation and standard scaling. Categorical preprocessing: most-frequent imputation and one-hot encoding. Class weighting was used for imbalance. Decision and workflow fields, approval status, and remarks were excluded to avoid target leakage.</p><p>Compared models: majority baseline, Logistic Regression, Random Forest, Extra Trees, and XGBoost. Limitations: one split, no tuning or cross-validation, no probability calibration, and approximately 1,020 minority-class examples. Do not use these results to make lending decisions.</p><h4>Extra Trees confusion matrix</h4><div id="confusionMatrix" aria-live="polite"></div></div>
+              <p class="confidential-note">Client name and data anonymized for confidentiality.</p>
+            </section>
           </div>
-          <div class="model-details">
-            <h4>Features and evaluation</h4>
-            <p>Numeric application-time features: loan amount, monthly, rebate, gross loan, total interest, old account, total deductions, net amount, term, interest rate, pension amount, age at application (clipped to 18–100), number of months, and dependents. Categorical features: loan type, branch, gender, civil status, pension code, purpose, employer, bank code, withdraw-all flag, and residence certificate. Group-level names and values are not displayed.</p>
-            <p>Numeric preprocessing: median imputation and standard scaling. Categorical preprocessing: most-frequent imputation and one-hot encoding. Class weighting was used for imbalance. Decision and workflow fields, approval status, and remarks were excluded to avoid target leakage.</p>
-            <p>Compared models: majority baseline, Logistic Regression, Random Forest, Extra Trees, and XGBoost. Limitations: one split, no tuning or cross-validation, no probability calibration, and approximately 1,020 minority-class examples. Do not use these results to make lending decisions.</p>
-            <h4>Extra Trees confusion matrix</h4>
-            <div id="confusionMatrix" aria-live="polite"></div>
-          </div>
-          <p class="confidential-note">Client name and data anonymized for confidentiality.</p>
-        </section>
         </details>
       </section>
 
@@ -199,22 +162,22 @@
             </div>
           </article>
           <article class="project-card">
+            <button class="lightbox-trigger project-screenshot" type="button" aria-label="Open full-size Station Performance Dashboard screenshot" data-caption="Station Performance Dashboard screenshot."><img src="assets/station-performance.png" alt="Station Performance Dashboard comparing utilization across stations" width="1101" height="617" loading="lazy" decoding="async" /></button>
             <div class="project-content">
               <p class="project-kicker">Operations Analytics</p>
               <h3>Station Performance Dashboard</h3>
               <p>Problem: station utilization and operational flow need to support staffing decisions. Finding: the top-utilized station is the strongest capacity signal at 10 hours and 37 minutes. Recommendation: monitor peak periods and consider rebalancing support work around high-use stations.</p>
               <p class="key-takeaway"><strong>Key takeaway:</strong> use utilization alongside peak-period context when reviewing operational coverage.</p>
-              <p class="confidential-note">Client name and data anonymized for confidentiality.</p>
               <div class="tag-row"><span>Utilization KPI</span><span>Peak-period insight</span><span>Operational reporting</span></div>
             </div>
           </article>
           <article class="project-card">
+            <button class="lightbox-trigger project-screenshot" type="button" aria-label="Open full-size Insights Summary screenshot" data-caption="Insights Summary dashboard screenshot."><img src="assets/insights-summary.png" alt="Insights Summary showing utilization, busiest day, peak period, and daily flow panels" width="1096" height="617" loading="lazy" decoding="async" /></button>
             <div class="project-content">
               <p class="project-kicker">Executive Reporting</p>
               <h3>Insights Summary</h3>
               <p>The summary brings together the top-utilized station, busiest day, peak period, and daily flow behavior. This gives managers a concise view of where activity is concentrated and which periods may need closer review.</p>
               <p class="key-takeaway"><strong>Key takeaway:</strong> combine the utilization, busiest-day, and peak-period views before deciding where to intervene.</p>
-              <p class="confidential-note">Client name and data anonymized for confidentiality.</p>
               <div class="tag-row"><span>Stakeholder summary</span><span>KPI storytelling</span></div>
             </div>
           </article>

@@ -1119,22 +1119,65 @@ code {
   display: block;
 }
 
-.project-detail-toggle {
-  margin-top: 22px;
+.technical-details {
+  margin-top: 28px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
 }
 
-.project-detail-toggle > summary {
+.technical-details > summary {
   padding: 16px 20px;
   color: var(--teal);
   font-weight: 800;
   cursor: pointer;
 }
 
-.project-detail-toggle[open] > summary { border-bottom: 1px solid var(--line); }
-.project-detail-toggle > :not(summary) { margin-left: 18px; margin-right: 18px; }
+.technical-details[open] > summary { border-bottom: 1px solid var(--line); }
+.technical-content { padding: 1px 18px 22px; }
+.technical-content > .population-note { margin-top: 20px; }
+
+.population-mismatch {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: .94rem;
+}
+
+.loan-glance {
+  margin: 26px 0 30px;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--teal);
+  border-radius: 8px;
+  padding: clamp(18px, 3vw, 28px);
+  background: #f8fbfa;
+}
+
+.loan-glance h3 { margin-bottom: 14px; font-size: 1.25rem; }
+.loan-glance dl { display: grid; gap: 10px; margin: 0; }
+.loan-glance dl > div { display: grid; grid-template-columns: minmax(140px, .28fr) 1fr; gap: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.loan-glance dl > div:last-child { padding-bottom: 0; border-bottom: 0; }
+.loan-glance dt { font-weight: 800; }
+.loan-glance dd { margin: 0; color: var(--muted); }
+
+.loan-story-blocks { display: grid; gap: 20px; max-width: 1000px; }
+.loan-story-block { border: 1px solid var(--line); border-radius: 8px; padding: clamp(18px, 3vw, 26px); background: #fff; }
+.loan-story-block h3 { margin-bottom: 10px; font-size: 1.2rem; }
+.loan-story-block > p { color: var(--muted); }
+.loan-story-block > p:last-child { margin-bottom: 0; }
+.loan-main-visual { margin-top: 18px; }
+.loan-footer-note { margin-top: 22px; }
+
+.project-screenshot {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #eef3f3;
+}
+
+.project-screenshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .snapshot .lightbox-trigger {
   height: 250px;
@@ -1368,6 +1411,7 @@ code {
 
   .case-study-meta div { width: 100%; }
   .project-hub-grid { grid-template-columns: 1fr; }
+  .loan-glance dl > div { grid-template-columns: 1fr; gap: 3px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
